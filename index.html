@@ -38,35 +38,35 @@
         xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=lyon&APPID=' + key, true);
         xhr.send(null);
 
-        // //Constance ne change jamais.
-        // const Appid = "2cc7d408f527de19889ec31f5c22aa33";
-        // let city = "Lyon";
+        //Constance ne change jamais.
+        const Appid = "2cc7d408f527de19889ec31f5c22aa33";
+        let city = "Lyon";
 
-        // // Ici, la requête sera émise de façon synchrone.
-        // let req = new XMLHttpRequest();
-        // req.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + Appid , true); 
-        // req.send(null);
+        // Ici, la requête sera émise de façon synchrone.
+        let req = new XMLHttpRequest();
+        req.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + Appid , true); 
+        req.send(null);
 
-        // if (req.status === 200) {
-        //     console.log("Réponse reçu: %s", req.responseText);
-        // } else {
-        //     console.log("Status de la réponse: %d (%s)", req.status, req.statusText);
-        // }
+        if (req.status === 200) {
+            console.log("Réponse reçu: %s", req.responseText);
+        } else {
+            console.log("Status de la réponse: %d (%s)", req.status, req.statusText);
+        }
 
-        // let query = new XMLHttpRequest();
-        // // api.openweathermap.org/data/2.5/weather?q={city name}&APPID={key}
-        // query.open("GET", "api.openweathermap.org/data/2.5/weather?q=Lyon&APPID=2cc7d408f527de19889ec31f5c22aa33", true);
-        // query.send();
-        // query.onreadystatechange = function() {
-        //     if(query.readyState === query.XMLHttpRequest) {
-        //         if(query.readyState === 200) {
-        //             console.log("Sucess " + query.responseText);
-        //         }else {
-        //             console.error("Error " + query.status);
-        //             console.log(query.responseText);
-        //         }
-        //     }
-        // }
+        let query = new XMLHttpRequest();
+        // api.openweathermap.org/data/2.5/weather?q={city name}&APPID={key}
+        query.open("GET", "api.openweathermap.org/data/2.5/weather?q=Lyon&APPID=2cc7d408f527de19889ec31f5c22aa33", true);
+        query.onreadystatechange = function() {
+            if(query.readyState === query.XMLHttpRequest) {
+                if(query.readyState === 200) {
+                    console.log("Sucess " + query.responseText);
+                }else {
+                    console.error("Error " + query.status);
+                    console.log(query.responseText);
+                }
+            }
+        }
+        query.send(null);
     </script>
 </body>
 </html>
