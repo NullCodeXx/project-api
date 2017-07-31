@@ -1,0 +1,33 @@
+API
+
+Recuperer des données.
+
+method : GET, POST, UPDATE, DELETE;
+
+//EXEMPLE
+**https://masupereapi/user/
+
+Le but étant de faire des actions par le biais des types de donner que l'on lui entre.
+
+*Rappel sur les code erreur:
+
+200 : succès de la requête ;
+301 et 302 : redirection, respectivement permanente et temporaire ;
+401 : utilisateur non authentifié ;
+403 : accès refusé ;
+404 : page non trouvée ;
+500 et 503 : erreur serveur.
+
+*Lien d'une API qui permet de recuperer des informations sur la météo etc...
+il faudra changer l'url ou la modifier en funtion des methods, il en éxiste 3 : 
+
+Methods
+
+Location Search
+Find a location
+Location
+Location information, and a 5 day forecast
+Location Day
+Source information and forecast history for a particular day & location
+
+https://www.metaweather.com/api/
